@@ -1,0 +1,95 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    
+ var love = setInterval(function(){
+  var r_num = Math.floor(Math.random() * 40) + 1;
+	var r_size = Math.floor(Math.random() * 65) + 10;
+	var r_left = Math.floor(Math.random() * 100) + 1;
+	var r_bg = Math.floor(Math.random() * 25) + 100;
+  var r_time = Math.floor(Math.random() * 5) + 5;
+  $('.bg_heart').append("<div class='heart' style='width:"+r_size+"px;height:"+r_size+"px;left:"+r_left+"%;background:rgba(255,"+(r_bg-25)+","+r_bg+",1);-webkit-animation:love "+r_time+"s ease;-moz-animation:love "+r_time+"s ease;-ms-animation:love "+r_time+"s ease;animation:love "+r_time+"s ease'></div>");
+  
+  $('.bg_heart').append("<div class='heart' style='width:"+(r_size-10)+"px;height:"+(r_size-10)+"px;left:"+(r_left+r_num)+"%;background:rgba(255,"+(r_bg-25)+","+(r_bg+25)+",1);-webkit-animation:love "+(r_time+5)+"s ease;-moz-animation:love "+(r_time+5)+"s ease;-ms-animation:love "+(r_time+5)+"s ease;animation:love "+(r_time+5)+"s ease'></div>");
+  
+  
+},500);
+
+</script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Te Glorbeo</title>
+</head>
+<body>
+  
+
+<div class="bg_heart">
+</div>
+
+<div class="container">
+ 
+</div>
+
+  </div>
+  
+  <div style="font-family: Arial, sans-serif; line-height: 1.6; text-align: center; color: #000;">
+    <p style="font-size: 24px; background: linear-gradient(to right, #ff7eb3, #ff758c); -webkit-background-clip: text; color: transparent;">
+        Mi querida princesa,
+    </p>
+    <p style="font-size: 20px;">
+        Habia una vez un caballero de armadura oxidada no porque no supiera como cuidarla sino porque en su torpeza no siempre supo proteger lo que mas amaba<br>
+        Ese caballero armado de suenos y esperanzas cruzo desiertos y enfrento dragones pero no fue hasta que te encontro mi princesa que entendio lo que era realmente luchar por algo valioso
+    </p>
+    <p style="font-size: 20px;">
+        Tu luz ilumino los rincones mas oscuros de su corazon y aunque en su camino cometio errores siempre ha sonado con recuperar tu confianza y tu amor<br>
+        Hoy en este dia tan especial no quiero ser solo un caballero con suenos rotos quiero ser el que cuide de ti te haga sonreir y te ame como mereces
+    </p>
+    <p style="font-size: 22px;">
+        Por eso hoy me arrodillo no con una espada sino con mi corazon en las manos para pedirte algo mas valioso que un reino<br>
+        <strong>Te gustaria ser mi princesa nuevamente y que volvamos a escribir juntos esta historia de amor</strong>
+    </p>
+    <p style="font-size: 24px; background: linear-gradient(to right, #42a5f5, #478ed1); -webkit-background-clip: text; color: transparent;">
+        Con todo mi amor<br>
+        Tu caballero eterno<br>
+        <strong>Oscar</strong>
+    </p>
+
+    <!-- Botones -->
+    <button onclick="accept()" style="padding: 10px 20px; font-size: 18px; margin: 10px; background-color: #4caf50; color: white; border: none; cursor: pointer;">
+        Aceptar
+    </button>
+    <button onclick="reject()" style="padding: 10px 20px; font-size: 18px; margin: 10px; background-color: #f44336; color: white; border: none; cursor: pointer;">
+        No
+    </button>
+
+    <!-- Contenedor para resultados -->
+    <div id="response" style="margin-top: 20px;"></div>
+</div>
+
+<script>
+function accept() {
+    document.getElementById('response').innerHTML = `
+        <img src="3anos.jpg" alt="Felicidad" style="width: 80%; margin-top: 20px;">
+    `;
+}
+
+function reject() {
+    document.getElementById('response').innerHTML = `
+        <button onclick="confirmReject()" style="padding: 10px 20px; font-size: 18px; margin: 10px; background-color: #ff9800; color: white; border: none; cursor: pointer;">
+            Estas segura
+        </button>
+    `;
+}
+
+function confirmReject() {
+    document.getElementById('response').innerHTML = `
+        <img src="https://ichef.bbci.co.uk/ace/ws/640/amz/worldservice/live/assets/images/2014/08/07/140807115216_macaco2_624x351_caters.jpg" alt="Decision Tomada" style="width: 80%; margin-top: 20px;">
+    `;
+}
+</script>
+
+
+
+</body>
+</html>
